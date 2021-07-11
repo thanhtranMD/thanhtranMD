@@ -1,0 +1,7 @@
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\bin\Debug\SimpleParallelForEach.exe.config
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\bin\Debug\SimpleParallelForEach.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\bin\Debug\SimpleParallelForEach.pdb
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\obj\Debug\SimpleParallelForEach.csproj.AssemblyReference.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\obj\Debug\SimpleParallelForEach.csproj.CoreCompileInputs.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\obj\Debug\SimpleParallelForEach.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataParallelSolution\SimpleParallelForEach\obj\Debug\SimpleParallelForEach.pdb
