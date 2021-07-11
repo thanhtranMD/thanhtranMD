@@ -11,15 +11,32 @@ namespace SimpleParallelForEach
 {
     public class DirectorySizeExample
     {
-        public void ShowDirectoryTotalSize(string dirPath)
+        public static void ShowDirectoryTotalSize()
         {
-            Console.WriteLine("Using parallel task");
-            ShowTotalSizeParallel(dirPath);
-            Console.WriteLine("Using normal sequential task");
-            ShowTotalSizeSequential(dirPath);
+            string cont;
+            do
+            {
+                Console.WriteLine("Enter a folder path to get total size.");
+                string dirPath = Console.ReadLine();
+                if (!Directory.Exists(dirPath))
+                {
+                    Console.WriteLine("The directory does not exist.");
+                }
+                else
+                {
+                    Console.WriteLine("Using parallel task");
+                    ShowTotalSizeParallel(dirPath);
+                    Console.WriteLine("Using normal sequential task");
+                    ShowTotalSizeSequential(dirPath);
+                }
+                Console.WriteLine("Continue y/n?");
+                cont = Console.ReadLine();
+            }
+            while (cont == "y" || cont.ToUpper() == "Y");
+
 
         }
-        private long ShowTotalSizeParallel(string dirPath)
+        private static long ShowTotalSizeParallel(string dirPath)
         {
             Stopwatch sw = Stopwatch.StartNew();
             long totalSize = 0;
@@ -45,7 +62,7 @@ namespace SimpleParallelForEach
             return totalSize;
         }
 
-        private long ShowTotalSizeSequential(string dirPath)
+        private static long ShowTotalSizeSequential(string dirPath)
         {
             Stopwatch sw = Stopwatch.StartNew();
             long totalSize = 0;
