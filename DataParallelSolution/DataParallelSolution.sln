@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleParallelForEach", "SimpleParallelForEach\SimpleParallelForEach.csproj", "{CC2F9587-82D7-420B-AFB6-F8E2E241077D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC2F9587-82D7-420B-AFB6-F8E2E241077D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2F9587-82D7-420B-AFB6-F8E2E241077D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2F9587-82D7-420B-AFB6-F8E2E241077D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2F9587-82D7-420B-AFB6-F8E2E241077D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CE28F02-8469-40B2-9A74-7B69FA26000F}
+	EndGlobalSection
+EndGlobal
