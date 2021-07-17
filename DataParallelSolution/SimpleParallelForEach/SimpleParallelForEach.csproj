@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DirectorySizeExample.cs" />
     <Compile Include="MultiplyMatrices.cs" />
+    <Compile Include="ParallelExamples.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

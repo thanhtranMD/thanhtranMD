@@ -21,6 +21,7 @@ namespace SimpleParallelForEach
                 Console.WriteLine("Select a menu:");
                 Console.WriteLine("1 - MShow directory size example");
                 Console.WriteLine("2 - Multiply Matrices example");
+                Console.WriteLine("3 - Parallel using ForEach example");
                 Console.WriteLine("Q or q to Quit.");
                 selectedMenu = Console.ReadLine();
                 switch (selectedMenu)
@@ -30,6 +31,9 @@ namespace SimpleParallelForEach
                         break;
                     case "2":
                         MultiplyMatrices.ExecMultiplyMatrices(args);
+                        break;
+                    case "3":
+                        ParallelExamples.ParallelForEachExample();
                         break;
                     default:
                         Console.WriteLine("Invalid selection.");
