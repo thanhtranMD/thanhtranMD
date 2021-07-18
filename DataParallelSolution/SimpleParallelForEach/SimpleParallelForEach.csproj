@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionExample.cs" />
     <Compile Include="DirectorySizeExample.cs" />
+    <Compile Include="FuncExample.cs" />
+    <Compile Include="IMenuItem.cs" />
     <Compile Include="MultiplyMatrices.cs" />
     <Compile Include="ParallelExamples.cs" />
     <Compile Include="Program.cs" />

@@ -9,8 +9,21 @@ using System.Threading.Tasks;
 
 namespace SimpleParallelForEach
 {
-    public class DirectorySizeExample
+    public class DirectorySizeExample : IMenuItem
     {
+        public DirectorySizeExample(int index)
+        {
+            Index = index;
+        }
+        public int Index { get; set; }
+
+        public string Name { get { return "Directory size Parallel.For example."; } }
+
+        public void Run()
+        {
+            ShowDirectoryTotalSize();
+        }
+
         public static void ShowDirectoryTotalSize()
         {
             string cont;

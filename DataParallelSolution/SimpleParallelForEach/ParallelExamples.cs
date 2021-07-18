@@ -8,8 +8,21 @@ using System.Threading.Tasks;
 
 namespace SimpleParallelForEach
 {
-    public class ParallelExamples
+    public class ParallelExamples : IMenuItem
     {
+        public ParallelExamples(int index)
+        {
+            Index = index;
+        }
+        public int Index { get; set; }
+
+        public string Name { get { return "Parallel ForEach example."; } }
+
+        public void Run()
+        {
+            ParallelForEachExample();
+        }
+
         public static void ParallelForEachExample()
         {
             // 2 million

@@ -10,40 +10,58 @@ namespace SimpleParallelForEach
 {
     class Program
     {
+        private static List<IMenuItem> MenuItems;
         static void Main(string[] args)
         {
+            PopulateMenuItems();
             const string welcomeText = "Welcome to Task Parallel Library Examples";
             Console.WriteLine(welcomeText);
             Console.WriteLine("-".PadRight(welcomeText.Length));
             string selectedMenu;
-            do
+            while (true)
             {
+                int menuNo;
                 Console.WriteLine("Select a menu:");
-                Console.WriteLine("1 - MShow directory size example");
-                Console.WriteLine("2 - Multiply Matrices example");
-                Console.WriteLine("3 - Parallel using ForEach example");
-                Console.WriteLine("Q or q to Quit.");
+                MenuItems.ForEach(delegate (IMenuItem item) { Console.WriteLine("{0} - {1}.", item.Index, item.Name); });
+                
+                Console.WriteLine("Enter non-numeric to Quit.");
                 selectedMenu = Console.ReadLine();
-                switch (selectedMenu)
+                if (int.TryParse(selectedMenu, out menuNo))
                 {
-                    case "1":
-                        DirectorySizeExample.ShowDirectoryTotalSize();
-                        break;
-                    case "2":
-                        MultiplyMatrices.ExecMultiplyMatrices(args);
-                        break;
-                    case "3":
-                        ParallelExamples.ParallelForEachExample();
-                        break;
-                    default:
+                    if (menuNo != 0 && menuNo <= MenuItems.Count)
+                    {
+                        MenuItems[menuNo-1].Run();
+                    }
+                    else
+                    {
                         Console.WriteLine("Invalid selection.");
-                        break;
+                    }
                 }
-            } while (selectedMenu.ToLower() != "q");
+                else
+                {
+                    break;
+                }
+            } 
             Console.WriteLine("Enter any key to quit.");
             Console.ReadLine();
         }
 
+        private static void RegisterMenuItem(IMenuItem item)
+        {
+            MenuItems.Add(item);
+        }
 
+        private static void PopulateMenuItems()
+        {
+            if(MenuItems == null)
+            {
+                MenuItems = new List<IMenuItem>();
+            }
+            RegisterMenuItem(new DirectorySizeExample(1));
+            RegisterMenuItem(new MultiplyMatrices(2));
+            RegisterMenuItem(new ParallelExamples(3));
+            RegisterMenuItem(new FuncExample(4));
+            RegisterMenuItem(new ActionExample(5));
+        }
     }
 }

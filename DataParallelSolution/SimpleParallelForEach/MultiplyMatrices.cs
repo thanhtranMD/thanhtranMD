@@ -7,8 +7,20 @@ using System.Threading.Tasks;
 
 namespace SimpleParallelForEach
 {
-    public class MultiplyMatrices
+    public class MultiplyMatrices : IMenuItem
     {
+        public MultiplyMatrices(int index)
+        {
+            Index = index;
+        }
+        public int Index { get; set; }
+
+        public string Name { get { return "Multiply Matrices Parallel.For example."; } }
+
+        public void Run()
+        {
+            ExecMultiplyMatrices();
+        }
         #region Sequential_Loop
         public static void MultiplyMatricesSequential(double[,] matA, double[,] matB,
                                                 double[,] result)
@@ -57,7 +69,7 @@ namespace SimpleParallelForEach
         #endregion
 
         #region Main
-        public static void ExecMultiplyMatrices(string[] args)
+        public static void ExecMultiplyMatrices()
         {
             // Set up matrices. Use small values to better view
             // result matrix. Increase the counts to see greater
