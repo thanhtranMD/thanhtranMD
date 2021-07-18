@@ -48,6 +48,7 @@ namespace SimpleParallelForEach
 
         private static void RegisterMenuItem(IMenuItem item)
         {
+            item.Index = MenuItems.Count + 1; // set menu index based on the last added entry index
             MenuItems.Add(item);
         }
 
@@ -57,11 +58,12 @@ namespace SimpleParallelForEach
             {
                 MenuItems = new List<IMenuItem>();
             }
-            RegisterMenuItem(new DirectorySizeExample(1));
-            RegisterMenuItem(new MultiplyMatrices(2));
-            RegisterMenuItem(new ParallelExamples(3));
-            RegisterMenuItem(new FuncExample(4));
-            RegisterMenuItem(new ActionExample(5));
+            RegisterMenuItem(new DirectorySizeExample());
+            RegisterMenuItem(new MultiplyMatrices());
+            RegisterMenuItem(new ParallelExamples());
+            RegisterMenuItem(new ParallelExamples(ParallelRunMode.ForEachWithLocal));
+            RegisterMenuItem(new FuncExample());
+            RegisterMenuItem(new ActionExample());
         }
     }
 }

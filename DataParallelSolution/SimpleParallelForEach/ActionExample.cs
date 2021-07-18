@@ -8,6 +8,7 @@ namespace SimpleParallelForEach
 {
     public class ActionExample:IMenuItem
     {
+        public ActionExample() { }
         public ActionExample(int index)
         {
             Index = index;

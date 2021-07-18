@@ -11,6 +11,8 @@ namespace SimpleParallelForEach
 {
     public class DirectorySizeExample : IMenuItem
     {
+        public DirectorySizeExample() { }
+        
         public DirectorySizeExample(int index)
         {
             Index = index;

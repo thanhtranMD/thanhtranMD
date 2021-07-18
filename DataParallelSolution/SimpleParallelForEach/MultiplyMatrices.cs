@@ -9,6 +9,7 @@ namespace SimpleParallelForEach
 {
     public class MultiplyMatrices : IMenuItem
     {
+        public MultiplyMatrices() { }
         public MultiplyMatrices(int index)
         {
             Index = index;

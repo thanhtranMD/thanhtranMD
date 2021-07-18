@@ -4,23 +4,66 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SimpleParallelForEach
 {
+    public enum ParallelRunMode
+    {
+        ForEach,
+        ForEachWithLocal,
+    }
     public class ParallelExamples : IMenuItem
     {
+        public ParallelExamples() { }
+
         public ParallelExamples(int index)
         {
             Index = index;
+            Mode = ParallelRunMode.ForEach;
         }
+        public ParallelExamples(ParallelRunMode mode)
+        {
+            Mode = mode;
+        }
+        public ParallelExamples(int index,ParallelRunMode mode)
+        {
+            Index = index;
+            Mode = mode;
+        }
+
+        public ParallelRunMode Mode { get; set; }
+
         public int Index { get; set; }
 
-        public string Name { get { return "Parallel ForEach example."; } }
+        public string Name 
+        { 
+            get 
+            {
+                switch(Mode)
+                {
+                    case ParallelRunMode.ForEach:
+                        return "Parallel ForEach example.";
+                    case ParallelRunMode.ForEachWithLocal:
+                        return "Parallel ForEach with thread local example.";
+                }
+                return "no idea!";
+            } 
+        }
 
         public void Run()
         {
-            ParallelForEachExample();
+            switch(Mode)
+            {
+                case ParallelRunMode.ForEach:
+                    ParallelForEachExample();
+                    break;
+                case ParallelRunMode.ForEachWithLocal:
+                    RunForEachThreadLocal();
+                    break;
+            }
+                
         }
 
         public static void ParallelForEachExample()
@@ -92,5 +135,27 @@ namespace SimpleParallelForEach
             }
             return true;
         }
+
+        public static void RunForEachThreadLocal()
+        {
+            int[] nums = Enumerable.Range(0, 1000000).ToArray();
+            long total = 0;
+            // First type parameter is the type of the source elements
+            // Second type parameter is the type of the thread-local variable (partition subtotal)
+            Parallel.ForEach<int, long>(nums, // source collection
+                                        () => 0, // method to initialize the local variable
+                                        (j, loop, subtotal) => // method invoked by the loop on each iteration
+                                        {
+                                            subtotal += j; //modify local variable
+                                            return subtotal; // value to be passed to next iteration
+                                        },
+                                        // Method to be executed when each partition has completed.
+                                        // finalResult is the final value of subtotal for a particular partition.
+                                        (finalResult) => Interlocked.Add(ref total, finalResult)
+                                        );
+
+            Console.WriteLine("The total from Parallel.ForEach is {0:N0}", total);
+        }
     }
+
 }

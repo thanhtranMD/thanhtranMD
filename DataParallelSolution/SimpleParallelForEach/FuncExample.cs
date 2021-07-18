@@ -8,6 +8,7 @@ namespace SimpleParallelForEach
 {
     public class FuncExample: IMenuItem
     {
+        public FuncExample() { }
         public FuncExample(int index)
         {
             Index = index;
