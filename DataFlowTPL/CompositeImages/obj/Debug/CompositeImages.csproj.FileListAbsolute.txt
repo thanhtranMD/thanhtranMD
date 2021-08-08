@@ -1,0 +1,13 @@
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\bin\Debug\CompositeImages.exe.config
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\bin\Debug\CompositeImages.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\bin\Debug\CompositeImages.pdb
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\bin\Debug\System.Threading.Tasks.Dataflow.xml
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.csproj.AssemblyReference.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.CompositeImageForm.resources
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.Properties.Resources.resources
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.csproj.GenerateResource.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.csproj.CoreCompileInputs.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.csproj.CopyComplete
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\DataFlowTPL\CompositeImages\obj\Debug\CompositeImages.pdb
