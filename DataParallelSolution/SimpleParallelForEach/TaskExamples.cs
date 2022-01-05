@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimpleParallelForEach
 {
-    public class TaskExamples
+    public class TaskExamples : IMenuItem
     {
         public static void Example1()
         {
@@ -16,7 +16,8 @@ namespace SimpleParallelForEach
             Task[] taskArray = new Task[10];
             for (int i = 0; i < taskArray.Length; i++)
             {
-                taskArray[i] = Task.Factory.StartNew((Object obj) => {
+                taskArray[i] = Task.Factory.StartNew((Object obj) =>
+                {
                     CustomData data = obj as CustomData;
                     if (data == null)
                         return;
@@ -33,12 +34,42 @@ namespace SimpleParallelForEach
                                       data.Name, data.CreationTime, data.ThreadNum);
             }
         }
-    }
+        public int Index { get; set; }
 
-    public class CustomData
-    {
-        public long CreationTime;
-        public int Name;
-        public int ThreadNum;
+        public string Name { get { return "Task examples."; } }
+
+        public void Run()
+        {
+            //int processor_count = Environment.ProcessorCount;
+            int lastID = 15090887;
+            int record_per_task = lastID / 4;
+            int fromVisitId = 0;
+            int toVisitId = 0;
+            string[] IDs = new string[4];
+            Console.WriteLine($"Last Id:{lastID} - Records per task:{record_per_task}");
+            for (int i = 0; i < IDs.Length; i++)
+            {
+                if (i>0)
+                    fromVisitId = toVisitId + 1;
+
+                if (i == IDs.Length - 1)
+                {
+                    toVisitId = lastID;
+                }
+                else
+                {
+                    toVisitId += record_per_task;
+                }
+                IDs[i] = $"{fromVisitId} - {toVisitId}";
+                Console.WriteLine($"{i} - {IDs[i]}");
+            }
+        }
+
+        public class CustomData
+        {
+            public long CreationTime;
+            public int Name;
+            public int ThreadNum;
+        }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\bin\Debug\PlinqExamples.exe.config
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\bin\Debug\PlinqExamples.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\bin\Debug\PlinqExamples.pdb
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\obj\Debug\PlinqExamples.csproj.AssemblyReference.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\obj\Debug\PlinqExamples.csproj.CoreCompileInputs.cache
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\obj\Debug\PlinqExamples.exe
+C:\Users\thanht\OneDrive - MedicalDirector\Development\VSTS\Source\Repos\thanhtranMD\PlinqExamples\PlinqExamples\obj\Debug\PlinqExamples.pdb

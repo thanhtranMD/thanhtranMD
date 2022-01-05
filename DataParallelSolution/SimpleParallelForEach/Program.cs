@@ -64,6 +64,7 @@ namespace SimpleParallelForEach
             RegisterMenuItem(new ParallelExamples(ParallelRunMode.ForEachWithLocal));
             RegisterMenuItem(new FuncExample());
             RegisterMenuItem(new ActionExample());
+            RegisterMenuItem(new TaskExamples());
         }
     }
 }
